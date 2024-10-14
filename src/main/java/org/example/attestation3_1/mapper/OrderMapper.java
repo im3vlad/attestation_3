@@ -14,7 +14,7 @@ import java.util.UUID;
 public class OrderMapper {
         public OrderEntity mapFromOrderDto(OrderDto orderDto) {
             OrderEntity orderEntity = new OrderEntity();
-            orderEntity.setOrderId(UUID.randomUUID());
+            orderEntity.setId(UUID.randomUUID());
             orderEntity.setOrderNumber(orderDto.getOrderNumber());
             orderEntity.setTotalPrice(orderDto.getTotalPrice());
             return orderEntity;

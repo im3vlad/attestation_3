@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+
 import java.util.UUID;
 
 @Entity
@@ -29,9 +29,6 @@ public class UserEntity {
 
     @Column(nullable = false)
     private String password;
-
-    @Column(nullable = true)
-    private LocalDate birthDate;
 
     @Column(nullable = true)
     private String numberPhone;

@@ -18,11 +18,11 @@ public class OrderEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID orderId = UUID.randomUUID();
+    private UUID Id = UUID.randomUUID();
 
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private UserEntity user;
+    private UserEntity userid;
 
     @Column(nullable = false)
     private String orderNumber;

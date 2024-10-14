@@ -9,6 +9,6 @@ import java.util.UUID;
 @Repository
 public interface OrderRepository extends CrudRepository<OrderEntity, Integer> {
 
-    void deleteById(UUID orderId);
-    OrderEntity findById(UUID orderId);
+    void deleteById(UUID Id);
+    OrderEntity findById(UUID Id);
 }

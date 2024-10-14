@@ -39,14 +39,14 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void deleteOrder(UUID orderId) {
-        log.info("Удаляем заказ с указанным" + orderId + ".");
-        orderRepository.deleteById(orderId);
+    public void deleteOrder(UUID Id) {
+        log.info("Удаляем заказ с указанным" + Id + ".");
+        orderRepository.deleteById(Id);
     }
 
     @Override
     public OrderDto updateOrder(OrderDto order) {
-        orderRepository.findById(order.getOrderId());
+        orderRepository.findById(order.getId());
         OrderMapper orderMapper = new OrderMapper();
         OrderEntity orderEntity = orderMapper.mapFromOrderDto(order);
         orderRepository.save(orderEntity);
@@ -60,8 +60,8 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public OrderEntity getOrder(UUID orderId) {
-       return orderRepository.findById(orderId);
+    public OrderEntity getOrder(UUID Id) {
+       return orderRepository.findById(Id);
 
     }
 }

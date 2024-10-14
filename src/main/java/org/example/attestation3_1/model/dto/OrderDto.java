@@ -7,7 +7,7 @@ import java.util.UUID;
 
 @Data
 public class OrderDto {
-    private UUID orderId = UUID.randomUUID();
+    private UUID Id = UUID.randomUUID();
     private UUID userId;
     private String orderNumber;
     private BigDecimal totalPrice;
